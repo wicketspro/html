@@ -1,0 +1,132 @@
+.complaints-section {
+  background: var(--dark-gray);
+}
+
+.complaints-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.help-intro {
+  margin-bottom: 50px;
+}
+
+.help-intro h3 {
+  font-family: "Orbitron", monospace;
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.help-intro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--white);
+  opacity: 0.9;
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.contact-method {
+  background: linear-gradient(145deg, var(--primary-black), var(--light-gray));
+  padding: 30px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: var(--white);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-method:hover {
+  transform: translateY(-5px);
+  border-color: var(--neon-green);
+  box-shadow: 0 10px 30px rgba(57, 255, 20, 0.2);
+}
+
+.method-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.method-info h4 {
+  font-family: "Orbitron", monospace;
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.method-info p {
+  color: var(--white);
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.help-guidelines {
+  background: var(--primary-black);
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid var(--gold);
+  text-align: left;
+}
+
+.help-guidelines h4 {
+  font-family: "Orbitron", monospace;
+  color: var(--neon-green);
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.help-guidelines ul {
+  list-style: none;
+  padding: 0;
+}
+
+.help-guidelines li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--dark-gray);
+  position: relative;
+  padding-left: 30px;
+}
+
+.help-guidelines li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--neon-green);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.help-guidelines li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .contact-methods {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-method {
+    padding: 25px;
+  }
+
+  .help-guidelines {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .help-guidelines ul {
+    text-align: left;
+  }
+}
