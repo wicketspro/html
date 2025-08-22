@@ -1,12 +1,33 @@
 /* Complete redesign with luxury casino aesthetic using semantic design tokens */
 .hero-banner {
-  min-height: 100vh;
   position: relative;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, var(--casino-dark) 0%, #1a1a1a 50%, var(--casino-dark) 100%);
-  overflow: hidden;
-  font-family: var(--font-sans);
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  z-index: 1;
+}
+
+/* Add subtle hover animation for trust icons */
+.trust-item:hover .trust-icon {
+  color: var(--casino-accent);
+  transform: scale(1.2);
+  transition: all 0.3s ease;
 }
 
 /* Added animated particles for premium feel */
@@ -97,7 +118,12 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #ffffff 0%, var(--casino-accent) 50%, #ffffff 100%);
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    var(--casino-accent) 50%,
+    #ffffff 100%
+  );
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -262,7 +288,11 @@
 .visual-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(5, 150, 105, 0.1) 0%, transparent 50%);
+  background: linear-gradient(
+    135deg,
+    rgba(5, 150, 105, 0.1) 0%,
+    transparent 50%
+  );
   pointer-events: none;
 }
 
