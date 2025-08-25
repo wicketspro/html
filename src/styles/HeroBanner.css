@@ -1,438 +1,72 @@
-/* Complete redesign with luxury casino aesthetic using semantic design tokens */
 .hero-banner {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: background-image 1s ease-in-out;
+  margin-top: 6rem;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.65) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
-    rgba(0, 0, 0, 0.65) 100%
-  );
-  z-index: 1;
-}
-
-/* Add subtle hover animation for trust icons */
-.trust-item:hover .trust-icon {
-  color: var(--casino-accent);
-  transform: scale(1.2);
-  transition: all 0.3s ease;
-}
-
-/* Added animated particles for premium feel */
-.hero-particles {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.particle {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: var(--casino-emerald);
-  border-radius: 50%;
-  opacity: 0.6;
-  animation: float-particle linear infinite;
-}
-
-@keyframes float-particle {
-  0% {
-    transform: translateY(100vh) scale(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.6;
-  }
-  90% {
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateY(-100px) scale(1);
-    opacity: 0;
-  }
-}
-
-.hero-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-}
-
-/* Modern content styling with better typography hierarchy */
-.hero-content {
-  animation: slideInLeft 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(5, 150, 105, 0.1);
-  border: 1px solid var(--casino-emerald);
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--casino-accent);
-  margin-bottom: 2rem;
-  backdrop-filter: blur(10px);
-}
-
-.badge-icon {
-  font-size: 1rem;
-}
-
-.hero-title {
-  font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  background: linear-gradient(
-    135deg,
-    #ffffff 0%,
-    var(--casino-accent) 50%,
-    #ffffff 100%
-  );
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradientShift 4s ease-in-out infinite;
-}
-
-@keyframes gradientShift {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.hero-subtitle {
-  font-size: 1.25rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 2.5rem;
-  max-width: 90%;
-}
-
-/* Added dynamic stats section for credibility */
-.hero-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-bottom: 3rem;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 1rem;
-  border: 1px solid rgba(5, 150, 105, 0.2);
-  backdrop-filter: blur(10px);
-}
-
-.stat-item {
-  text-align: center;
-}
-
-.stat-value {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--casino-accent);
-  margin-bottom: 0.5rem;
-}
-
-.stat-label {
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 500;
-}
-
-/* Enhanced button styling with modern interactions */
-.hero-actions {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.btn-primary,
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 2rem;
-  border-radius: 0.75rem;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background: var(--casino-gradient);
-  color: white;
-  box-shadow: var(--casino-shadow);
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--casino-glow), var(--casino-shadow);
-}
-
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-}
-
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
-}
-
-.btn-icon {
-  width: 1.25rem;
-  height: 1.25rem;
-  transition: transform 0.3s ease;
-}
-
-.btn-primary:hover .btn-icon {
-  transform: translateX(4px);
-}
-
-/* Added trust indicators for better conversion */
-.trust-indicators {
-  display: flex;
-  gap: 2rem;
-}
-
-.trust-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.trust-icon {
-  font-size: 1.25rem;
-}
-
-/* Enhanced visual section with better image treatment */
-.hero-visual {
-  position: relative;
-  animation: slideInRight 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.visual-container {
-  position: relative;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: var(--casino-shadow);
-}
-
-.hero-image {
+.banner-image {
   width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.visual-overlay {
+  height: 100%;
+  object-fit: cover;
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(5, 150, 105, 0.1) 0%,
-    transparent 50%
-  );
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  transition: opacity 0.8s ease-in-out;
 }
 
-/* Modern navigation controls */
 .nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 3.5rem;
-  height: 3.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
   color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav-btn:hover {
-  background: var(--casino-emerald);
-  border-color: var(--casino-emerald);
-  transform: translateY(-50%) scale(1.1);
-}
-
-.nav-btn svg {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.nav-prev {
-  left: 2rem;
-}
-.nav-next {
-  right: 2rem;
-}
-
-/* Enhanced slide indicators */
-.slide-indicators {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 1rem;
-  z-index: 3;
-}
-
-.indicator {
-  width: 3rem;
-  height: 0.5rem;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 0.25rem;
   border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
+  z-index: 2;
+  border-radius: 50%;
+}
+.nav-btn.prev {
+  left: 15px;
+}
+.nav-btn.next {
+  right: 15px;
 }
 
-.indicator.active {
-  background: var(--casino-emerald);
-}
-
-.indicator-progress {
+.indicators {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: var(--casino-accent);
-  animation: progress 8s linear;
+  bottom: 20px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  width: 100%;
+  z-index: 2;
 }
-
-@keyframes progress {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
+.dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
 }
-
-/* Enhanced mobile responsiveness */
-@media (max-width: 1024px) {
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    text-align: center;
-  }
-
-  .hero-stats {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    padding: 1.5rem;
-  }
+.dot.active {
+  background: #00b894;
 }
 
 @media (max-width: 768px) {
-  .hero-container {
-    padding: 0 1rem;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.1rem;
-    max-width: 100%;
-  }
-
-  .hero-stats {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .trust-indicators {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
   .nav-btn {
-    width: 3rem;
-    height: 3rem;
+    font-size: 1.5rem;
+    padding: 0.3rem 0.6rem;
   }
-
-  .nav-prev {
-    left: 1rem;
-  }
-  .nav-next {
-    right: 1rem;
+  .dot {
+    width: 10px;
+    height: 10px;
   }
 }

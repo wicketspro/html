@@ -50,11 +50,10 @@ const Navbar = () => {
         {/* Brand + Logo */}
         <div className="nav-brand">
           <img
-            src="/logo192.png" // replace with your logo path
+            src="./src/assets/logo9w.png" // replace with your logo path
             alt="Logo"
             className="nav-logo"
           />
-          <h2>Wickets Pro</h2>
         </div>
 
         {/* Menu */}
