@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 6rem;
+  margin-top: 5.5rem;
 }
 
 .banner-image {
@@ -58,6 +58,19 @@
 }
 .dot.active {
   background: #00b894;
+}
+
+/* Tablet & Mobile adjustments */
+@media (max-width: 1024px) {
+  .hero-banner {
+    height: auto; /* allow natural scaling */
+  }
+
+  .banner-image {
+    position: relative;
+    height: auto;
+    max-height: 90vh; /* prevent overflow on smaller screens */
+  }
 }
 
 @media (max-width: 768px) {
