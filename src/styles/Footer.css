@@ -1,5 +1,9 @@
 .footer {
-  background: linear-gradient(135deg, var(--primary-black) 0%, var(--dark-gray) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary-black) 0%,
+    var(--dark-gray) 100%
+  );
   padding: 60px 0 20px;
   border-top: 3px solid var(--gold);
 }
@@ -12,7 +16,7 @@
 }
 
 .footer-brand h3 {
-  font-family: "Orbitron", monospace;
+  font-family: 'Orbitron', monospace;
   background: linear-gradient(45deg, var(--gold), var(--neon-green));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -73,12 +77,27 @@
   font-size: 1.5rem;
   text-decoration: none;
   transition: all 0.3s ease;
+  color: white;
 }
 
 .social-link:hover {
-  background: var(--gold);
+  background: var(--brand-color, var(--gold));
+  border-color: var(--brand-color, var(--gold));
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+.social-link:hover svg {
+  color: white;
+}
+
+.imo-logo {
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.social-link:hover .imo-logo {
+  filter: none;
 }
 
 .footer-bottom {
@@ -103,7 +122,7 @@
   color: var(--neon-green);
   cursor: pointer;
   text-decoration: underline;
-  font-family: "Play", sans-serif;
+  font-family: 'Play', sans-serif;
   transition: color 0.3s ease;
 }
 
@@ -159,7 +178,7 @@
 }
 
 .modal-content h3 {
-  font-family: "Orbitron", monospace;
+  font-family: 'Orbitron', monospace;
   color: var(--gold);
   margin-bottom: 20px;
   font-size: 1.5rem;
@@ -187,7 +206,7 @@
 }
 
 .modal-body li:before {
-  content: "•";
+  content: '•';
   position: absolute;
   left: 0;
   color: var(--neon-green);

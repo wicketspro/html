@@ -1,5 +1,6 @@
 .contact-section {
   background: var(--dark-gray);
+  padding: 60px 20px;
 }
 
 .contact-content {
@@ -13,7 +14,7 @@
 }
 
 .contact-intro h3 {
-  font-family: "Orbitron", monospace;
+  font-family: 'Orbitron', monospace;
   font-size: 2rem;
   color: var(--gold);
   margin-bottom: 20px;
@@ -30,7 +31,7 @@
 
 .admin-contacts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
   margin-bottom: 60px;
 }
@@ -50,7 +51,7 @@
 }
 
 .admin-card h4 {
-  font-family: "Orbitron", monospace;
+  font-family: 'Orbitron', monospace;
   color: var(--neon-green);
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -63,49 +64,111 @@
 }
 
 .admin-contact-buttons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
+/* Enhanced modern social buttons with consistent sizing and improved styling */
 .contact-btn {
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  font-size: 0.9rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
+.contact-btn .platform-logo {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Added specific styling for IMO image logo to ensure proper sizing and display */
+.contact-btn img.platform-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+/* Added white filter to IMO logo to match other platform logos */
+.contact-btn img.platform-logo.imo-logo {
+  filter: brightness(0) invert(1);
+}
+
+.contact-btn svg,
+.contact-btn i {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  font-size: 24px;
+}
+
+/* Updated platform colors with better contrast and modern gradients */
 .whatsapp {
-  background: #25d366;
-  color: white;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
 }
 
+.whatsapp:hover {
+  background: linear-gradient(135deg, #128c7e, #25d366);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* Updated IMO button background to match the blue color scheme of the official IMO logo */
 .imo {
-  background: #ff6b6b;
-  color: white;
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  box-shadow: 0 4px 15px rgba(30, 136, 229, 0.3);
+}
+
+.imo:hover {
+  background: linear-gradient(135deg, #1565c0, #1e88e5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(30, 136, 229, 0.4);
 }
 
 .telegram {
-  background: #0088cc;
-  color: white;
+  background: linear-gradient(135deg, #0088cc, #0066aa);
+  box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
+}
+
+.telegram:hover {
+  background: linear-gradient(135deg, #0066aa, #0088cc);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 136, 204, 0.4);
 }
 
 .messenger {
-  background: #0084ff;
-  color: white;
+  background: linear-gradient(135deg, #0084ff, #0066cc);
+  box-shadow: 0 4px 15px rgba(0, 132, 255, 0.3);
 }
 
-.contact-btn:hover {
+.messenger:hover {
+  background: linear-gradient(135deg, #0066cc, #0084ff);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 132, 255, 0.4);
 }
 
+/* Active state for better user feedback */
+.contact-btn:active {
+  transform: translateY(0) scale(0.98);
+  transition: transform 0.1s;
+}
+
+/* Benefits section (unchanged but polished) */
 .agent-benefits {
   background: var(--primary-black);
   padding: 40px;
@@ -114,7 +177,7 @@
 }
 
 .agent-benefits h4 {
-  font-family: "Orbitron", monospace;
+  font-family: 'Orbitron', monospace;
   color: var(--gold);
   text-align: center;
   margin-bottom: 30px;
@@ -160,6 +223,7 @@
   line-height: 1.4;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .admin-contacts {
     grid-template-columns: 1fr;
@@ -171,22 +235,57 @@
   }
 
   .admin-contact-buttons {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    justify-content: center;
+    gap: 16px;
   }
 
-  .benefits-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  .contact-btn {
+    width: 52px;
+    height: 52px;
   }
 
-  .agent-benefits {
-    padding: 30px 20px;
+  .contact-btn .platform-logo {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Added responsive sizing for IMO image logo */
+  .contact-btn img.platform-logo.imo-logo {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) invert(1);
   }
 }
 
 @media (max-width: 480px) {
-  .benefits-grid {
-    grid-template-columns: 1fr;
+  .admin-contact-buttons {
+    gap: 12px;
   }
+
+  .contact-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .contact-btn .platform-logo {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Added responsive sizing for IMO image logo on mobile */
+  .contact-btn img.platform-logo.imo-logo {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+  }
+}
+
+/* Added focus states for accessibility */
+.contact-btn:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.contact-btn:focus:not(:focus-visible) {
+  outline: none;
 }

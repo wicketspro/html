@@ -1,6 +1,6 @@
 const masterAgents = [
   {
-    photo: '/professional-agent-avatar.png',
+    photo: '../../assets/pro.png',
     id: '542',
     name: 'রাহুল চৌধুরী',
     whatsappCall: 'https://wa.me/+8801341379498?call',
@@ -13,7 +13,7 @@ const masterAgents = [
     testimonial: 'খুবই ভালো সার্ভিস এবং দ্রুত পেমেন্ট',
   },
   {
-    photo: '/professional-female-agent-avatar.png',
+    photo: '../../female.png',
     id: '543',
     name: 'সাবিনা খাতুন',
     whatsappCall: 'https://wa.me/+8801341379499?call',
