@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react';
 import '../styles/Navbar.css';
 
+// Import logo so bundler includes it in build
+import logo9w from '../assets/logo9w.png';
+
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,11 +52,7 @@ const Navbar = () => {
       <div className="container">
         {/* Brand + Logo */}
         <div className="nav-brand">
-          <img
-            src="./src/assets/logo9w.png" // replace with your logo path
-            alt="Logo"
-            className="nav-logo"
-          />
+          <img src={logo9w} alt="Logo" className="nav-logo" />
         </div>
 
         {/* Menu */}
@@ -81,7 +80,6 @@ const Navbar = () => {
 
           {/* Social Icons */}
           <div className="social-icons">
-            {/* Facebook Page */}
             <a href="#" className="social-icon facebook" aria-label="Facebook">
               <svg
                 width="20"
@@ -92,7 +90,6 @@ const Navbar = () => {
                 <path d="M24 12.073c0-6.627-5.373-12-12-12...z" />
               </svg>
             </a>
-            {/* Group */}
             <a href="#" className="social-icon group" aria-label="Group">
               <svg
                 width="20"
@@ -103,7 +100,6 @@ const Navbar = () => {
                 <path d="M12 12.75c1.63 0 3.07.39...z" />
               </svg>
             </a>
-            {/* YouTube */}
             <a href="#" className="social-icon youtube" aria-label="YouTube">
               <svg
                 width="20"
