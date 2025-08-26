@@ -1,7 +1,6 @@
 const adminSubadmin = [
   {
     photo: '/professional-admin-avatar.png',
-    id: '849',
     name: 'আকাশ চৌধুরী',
     whatsappCall: 'https://wa.me/+8801341379505?call',
     whatsappMessage: 'https://wa.me/+8801341379505',
@@ -14,7 +13,6 @@ const adminSubadmin = [
   },
   {
     photo: '/sub-admin-avatar-professional.png',
-    id: '850',
     name: 'সালমা খাতুন',
     whatsappCall: 'https://wa.me/+8801341379506?call',
     whatsappMessage: 'https://wa.me/+8801341379506',
@@ -22,7 +20,7 @@ const adminSubadmin = [
     telegram: 'https://t.me/username9',
     messenger: 'https://m.me/username9',
     status: 'offline',
-    rating: 5,
+    rating: 5.0,
     testimonial: 'দ্রুত সমস্যা সমাধান এবং গাইডেন্স',
   },
 ];

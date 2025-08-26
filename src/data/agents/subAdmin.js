@@ -1,7 +1,7 @@
 const vipAgents = [
   {
     photo: './masud.png',
-    id: '747',
+    id: '542',
     name: 'মাসুদ খান',
     whatsappCall: 'https://wa.me/+8801341379503?call',
     whatsappMessage: 'https://wa.me/+8801341379503',
@@ -14,7 +14,7 @@ const vipAgents = [
   },
   {
     photo: './nibir.jpg',
-    id: '748',
+    id: '151',
     name: 'নিবিড় আহমেদ',
     whatsappCall: 'https://wa.me/+8801341379504?call',
     whatsappMessage: 'https://wa.me/+8801341379504',
