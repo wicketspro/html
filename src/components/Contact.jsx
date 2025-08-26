@@ -81,17 +81,9 @@ const Contact = () => {
   return (
     <section id="contact" className="section contact-section">
       <div className="container">
-        <h2 className="section-title">যোগাযোগ</h2>
+        <h2 className="section-title">সাপোর্ট</h2>
 
         <div className="contact-content">
-          <div className="contact-intro">
-            <h3>এজেন্ট হিসেবে যোগ দিন</h3>
-            <p>
-              আমাদের সাথে এজেন্ট হিসেবে কাজ করুন এবং হাই কমিশন ও বোনাস পান।
-              এজেন্ট হতে চাইলে নিচের এডমিনদের সাথে যোগাযোগ করুন।
-            </p>
-          </div>
-
           <div className="admin-contacts">
             {adminContacts.map((admin, index) => (
               <div key={index} className="admin-card">

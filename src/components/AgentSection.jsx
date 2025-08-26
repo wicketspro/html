@@ -1,22 +1,22 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import AgentCard from "./AgentCard"
-import masterAgents from "../data/agents/masterAgents"
-import superAgents from "../data/agents/superAgents"
-import vipAgents from "../data/agents/vipAgents"
-import adminSubadmin from "../data/agents/adminSubadmin"
-import "../styles/AgentSection.css"
+import { useState } from 'react';
+import AgentCard from './AgentCard';
+import masterAgents from '../data/agents/masterAgents';
+import superAgents from '../data/agents/superAgents';
+import vipAgents from '../data/agents/subAdmin';
+import adminSubadmin from '../data/agents/admin';
+import '../styles/AgentSection.css';
 
 const AgentSection = () => {
-  const [activeCategory, setActiveCategory] = useState("master")
+  const [activeCategory, setActiveCategory] = useState('master');
 
   const agentCategories = {
-    master: { data: masterAgents, title: "মাস্টার এজেন্টস" },
-    super: { data: superAgents, title: "সুপার এজেন্টস" },
-    vip: { data: vipAgents, title: "ভিআইপি এজেন্টস" },
-    admin: { data: adminSubadmin, title: "এডমিন / সাব এডমিন" },
-  }
+    master: { data: masterAgents, title: 'মাস্টার এজেন্টস' },
+    super: { data: superAgents, title: 'সুপার এজেন্টস' },
+    vip: { data: vipAgents, title: 'সাব এডমিন' },
+    admin: { data: adminSubadmin, title: 'এডমিন' },
+  };
 
   return (
     <section id="agents" className="section agent-section">
@@ -27,7 +27,9 @@ const AgentSection = () => {
           {Object.entries(agentCategories).map(([key, category]) => (
             <button
               key={key}
-              className={`category-tab ${activeCategory === key ? "active" : ""}`}
+              className={`category-tab ${
+                activeCategory === key ? 'active' : ''
+              }`}
               onClick={() => setActiveCategory(key)}
             >
               {category.title}
@@ -42,7 +44,7 @@ const AgentSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default AgentSection
+export default AgentSection;

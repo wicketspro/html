@@ -1,6 +1,6 @@
 const vipAgents = [
   {
-    photo: '/vip-agent-avatar-luxury.png',
+    photo: './masud.png',
     id: '747',
     name: 'মাসুদ খান',
     whatsappCall: 'https://wa.me/+8801341379503?call',
@@ -13,7 +13,7 @@ const vipAgents = [
     testimonial: 'VIP সার্ভিস এবং এক্সক্লুসিভ বোনাস',
   },
   {
-    photo: '/vip-female-agent-avatar-luxury.png',
+    photo: './nibir.jpg',
     id: '748',
     name: 'নিবিড় আহমেদ',
     whatsappCall: 'https://wa.me/+8801341379504?call',

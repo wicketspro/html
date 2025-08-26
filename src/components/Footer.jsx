@@ -108,7 +108,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
-            <h3>ক্রিকেট ক্যাসিনো</h3>
+            <h3>9Wicketsvip.pro</h3>
             <p>বিশ্বস্ত বেটিং প্ল্যাটফর্ম</p>
           </div>
 
@@ -125,7 +125,7 @@ const Footer = () => {
                 <a href="#faq">সাধারণ প্রশ্নোত্তর</a>
               </li>
               <li>
-                <a href="#contact">যোগাযোগ</a>
+                <a href="#contact">সাপোর্ট</a>
               </li>
             </ul>
           </div>
@@ -162,7 +162,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-copyright">
-            <p>&copy; ২০২৫ ক্রিকেট ক্যাসিনো। সকল অধিকার সংরক্ষিত।</p>
+            <p>&copy; ২০২৫ 9Wicketsvip.pro সকল অধিকার সংরক্ষিত।</p>
             <p className="responsible-gaming">১৮+ দায়িত্বশীল গেমিং</p>
           </div>
         </div>

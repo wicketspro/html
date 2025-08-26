@@ -1,6 +1,6 @@
 const superAgents = [
   {
-    photo: '/super-agent-avatar.png',
+    photo: './jamal.png',
     id: '645',
     name: 'জামাল ভূঁইয়া',
     whatsappCall: 'https://wa.me/+8801341379501?call',
@@ -13,7 +13,7 @@ const superAgents = [
     testimonial: 'হাই লিমিট এবং ভালো অডস',
   },
   {
-    photo: '/super-agent-female-avatar.png',
+    photo: './nibir.jpg',
     id: '646',
     name: 'নিবিড় আহমেদ',
     whatsappCall: 'https://wa.me/+8801341379502?call',
