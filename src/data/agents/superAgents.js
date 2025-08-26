@@ -2,7 +2,7 @@ const superAgents = [
   {
     photo: '/super-agent-avatar.png',
     id: '645',
-    name: 'আলী হাসান',
+    name: 'জামাল ভূঁইয়া',
     whatsappCall: 'https://wa.me/+8801341379501?call',
     whatsappMessage: 'https://wa.me/+8801341379501',
     imo: 'https://imo.onelink.me/7QO/isw',
@@ -15,7 +15,7 @@ const superAgents = [
   {
     photo: '/super-agent-female-avatar.png',
     id: '646',
-    name: 'ফাতেমা বেগম',
+    name: 'নিবিড় আহমেদ',
     whatsappCall: 'https://wa.me/+8801341379502?call',
     whatsappMessage: 'https://wa.me/+8801341379502',
     imo: 'https://imo.onelink.me/7QO/isw',

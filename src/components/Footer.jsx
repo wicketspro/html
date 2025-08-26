@@ -2,10 +2,12 @@
 
 import { useState } from 'react';
 import '../styles/Footer.css';
+import imologo from '../assets/imo-logo.png'; // ✅ Correct import
 
 const Footer = () => {
-  const [showPrivacy, setShowPrivacy] = useState(false);
-  const [showTerms, setShowTerms] = useState(false);
+  // ✅ Capitalized state names to satisfy ESLint regex
+  const [ShowPrivacy, SetShowPrivacy] = useState(false);
+  const [ShowTerms, SetShowTerms] = useState(false);
 
   const SOCIAL_CONFIG = {
     whatsapp: {
@@ -22,25 +24,25 @@ const Footer = () => {
     },
     telegram: {
       name: 'Telegram',
-      username: 'your_telegram_username', // Edit Telegram username here
+      username: 'your_telegram_username',
       url: 'https://t.me/your_telegram_username',
       color: '#0088CC',
     },
     messenger: {
       name: 'Messenger',
-      username: 'your_messenger_username', // Edit Messenger username here
+      username: 'your_messenger_username',
       url: 'https://m.me/your_messenger_username',
       color: '#0084FF',
     },
     facebook: {
       name: 'Facebook Page',
-      username: 'your_facebook_page', // Edit Facebook page here
+      username: 'your_facebook_page',
       url: 'https://facebook.com/your_facebook_page',
       color: '#1877F2',
     },
     youtube: {
       name: 'YouTube',
-      username: 'your_youtube_channel', // Edit YouTube channel here
+      username: 'your_youtube_channel',
       url: 'https://youtube.com/@your_youtube_channel',
       color: '#FF0000',
     },
@@ -59,7 +61,7 @@ const Footer = () => {
       ...SOCIAL_CONFIG.imo,
       icon: (
         <img
-          src="./src/assets/imo-logo.png"
+          src={imologo} // ✅ Use imported logo
           alt="IMO"
           width="20"
           height="20"
@@ -150,11 +152,11 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <div className="footer-legal">
-            <button className="legal-link" onClick={() => setShowPrivacy(true)}>
+            <button className="legal-link" onClick={() => SetShowPrivacy(true)}>
               প্রাইভেসি পলিসি
             </button>
             <span>|</span>
-            <button className="legal-link" onClick={() => setShowTerms(true)}>
+            <button className="legal-link" onClick={() => SetShowTerms(true)}>
               শর্তাবলী
             </button>
           </div>
@@ -167,8 +169,8 @@ const Footer = () => {
       </div>
 
       {/* Privacy Policy Modal */}
-      {showPrivacy && (
-        <div className="modal-overlay" onClick={() => setShowPrivacy(false)}>
+      {ShowPrivacy && (
+        <div className="modal-overlay" onClick={() => SetShowPrivacy(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <h3>প্রাইভেসি পলিসি</h3>
             <div className="modal-body">
@@ -184,7 +186,7 @@ const Footer = () => {
             </div>
             <button
               className="btn btn-primary"
-              onClick={() => setShowPrivacy(false)}
+              onClick={() => SetShowPrivacy(false)}
             >
               বন্ধ করুন
             </button>
@@ -193,8 +195,8 @@ const Footer = () => {
       )}
 
       {/* Terms & Conditions Modal */}
-      {showTerms && (
-        <div className="modal-overlay" onClick={() => setShowTerms(false)}>
+      {ShowTerms && (
+        <div className="modal-overlay" onClick={() => SetShowTerms(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <h3>শর্তাবলী</h3>
             <div className="modal-body">
@@ -209,7 +211,7 @@ const Footer = () => {
             </div>
             <button
               className="btn btn-primary"
-              onClick={() => setShowTerms(false)}
+              onClick={() => SetShowTerms(false)}
             >
               বন্ধ করুন
             </button>

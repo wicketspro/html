@@ -4,9 +4,9 @@ import { useState, useEffect } from 'react';
 import '../styles/HeroBanner.css';
 
 // Import images so bundler can resolve paths correctly
-import banner1 from '../assets/banner1.jpeg';
-import banner2 from '../assets/banner2.jpg';
-import banner3 from '../assets/banner3.jpg';
+import b1 from '../assets/b1.png';
+import b2 from '../assets/b2.png';
+import b3 from '../assets/b3.png';
 import banner4 from '../assets/banner4.jpg';
 import banner5 from '../assets/banner5.jpg';
 
@@ -14,7 +14,7 @@ const HeroBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Array of imported images
-  const banners = [banner1, banner2, banner3, banner4, banner5];
+  const banners = [b1, b2, b3, banner4, banner5];
 
   // autoplay every 6s
   useEffect(() => {
