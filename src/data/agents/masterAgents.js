@@ -51,6 +51,19 @@ const masterAgents = [
     rating: 4.9,
     testimonial: 'দ্রুত এবং নিরাপদ লেনদেন',
   },
+  {
+    photo: './Tanvir.png',
+    id: '215',
+    name: 'তানভীর আহমেদ',
+    whatsappCall: 'https://wa.me/+8801870091819',
+    whatsappMessage: 'https://wa.me/message/XGFAUN424T2JH1',
+    imo: 'https://imo.onelink.me/7QOl/isw',
+    telegram: 'https://t.me/username3',
+    messenger: 'https://m.me/username3',
+    status: 'online',
+    rating: 5,
+    testimonial: 'দ্রুত এবং নিরাপদ লেনদেন',
+  },
 ];
 
 export default masterAgents;
